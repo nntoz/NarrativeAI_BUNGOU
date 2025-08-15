@@ -1,0 +1,23 @@
+@use "@/styles/global" as *;
+
+html,
+body {
+  font-size: getVW(16);
+  margin: 0;
+  padding: 0;
+  font-family: "ten-mincho-text", serif;
+  font-weight: 400;
+  font-style: normal;
+  // cursor: none;
+  @media (max-width: 768px) {
+    font-size: getVW(16,768);
+  }
+}
+
+.l-main {
+  width: 100vw;
+  background-color: getColor(base);
+  display: flex;
+  flex-direction: column;
+  height: 100dvh;
+}

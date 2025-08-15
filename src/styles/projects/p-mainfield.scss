@@ -1,0 +1,146 @@
+@use "@/styles/global" as *;
+
+.mainfield {
+  padding-top: getVH(100);
+  padding-right: getVW(80);
+  padding-bottom: getVH(100);
+  display: flex;
+  width: 100%;
+  height: 100%;
+  justify-content: flex-start;
+  flex-direction: row-reverse;
+}
+
+.inputWrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  align-items: center;
+  margin-left: getVW(0.8);
+}
+
+.inputContainer {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.quote {
+  @include fontsize(24);
+  writing-mode: vertical-rl;
+  -ms-writing-mode: tb-rl;
+  user-select: none;
+  pointer-events: none;
+}
+
+.mf__input {
+  writing-mode: vertical-rl;
+  -ms-writing-mode: tb-rl;
+  @include fontsize(24);
+  outline: none;
+  border: none;
+  box-shadow: none;
+  overflow: hidden;
+  resize: none;
+  text-align: left;
+  max-height: calc(getVW(24)*25);
+  white-space: nowrap;
+  overscroll-behavior: none;
+  
+  &:focus {
+    outline: none !important;
+    border: none;
+    box-shadow: none;
+  }
+  
+  &::placeholder {
+    color: #999;
+  }
+  
+}
+
+.hiddenMeasure {
+  position: absolute;
+  top: -9999px;
+  left: -9999px;
+  writing-mode: vertical-rl;
+  -ms-writing-mode: tb-rl;
+  @include fontsize(24);
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  visibility: hidden;
+  pointer-events: none;
+  font-family: inherit;
+  font-weight: inherit;
+  letter-spacing: inherit;
+  line-height: 1.5em;
+}
+
+.userMessage {
+  margin-left: getVW(24);
+  -ms-writing-mode: tb-rl;
+  writing-mode: vertical-rl;
+  @include fontsize(24);
+  outline: none;
+  border: none;
+  box-shadow: none;
+  overflow: hidden;
+  text-align: left;
+  line-height: 1.5em;
+}
+
+.response {
+  margin-left: getVW(24);
+  -ms-writing-mode: tb-rl;
+  writing-mode: vertical-rl;
+  @include fontsize(24);
+  outline: none;
+  border: none;
+  box-shadow: none;
+  overflow: hidden;
+  text-align: left;
+  line-height: 1.5em;
+  
+  .responseChar {
+    display: inline;
+    opacity: 0;
+    will-change: opacity, transform;
+  }
+  
+  br {
+    line-height: 1.5em;
+  }
+}
+
+.loading {
+  -ms-writing-mode: tb-rl;
+  writing-mode: vertical-rl;
+  @include fontsize(24);
+  color: #999;
+}
+
+.kakutei {
+  margin-top: getVW(5);
+  background-color: #000;
+  color: #fff;
+  height: fit-content;
+  text-align: center;
+  padding-top: getVW(5);
+  padding-bottom: getVW(5);
+  cursor: pointer;
+  writing-mode: vertical-rl;
+  -ms-writing-mode: tb-rl;
+  @include fontsize(20);
+  outline: none;
+  border: none;
+  box-shadow: none;
+  overflow: hidden;
+  resize: none;
+  text-align: left;
+  
+  &:hover {
+    background-color: #333;
+    transition: background-color 0.2s ease;
+  }
+}

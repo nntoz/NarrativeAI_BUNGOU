@@ -1,0 +1,14 @@
+@mixin fontsize($fontsize: 14, $base: 16) {
+  font-size: #{$fontsize}px; // px指定
+  font-size: calc(#{$fontsize} / #{$base} * 1rem); // rem変換
+}
+
+@function getVW($fontsize, $viewport: 1920) {
+  $rate: 100 / $viewport;
+  @return $rate * $fontsize * 1vw;
+}
+
+@function getVH($fontsize, $viewport: 1080) {
+  $rate: 100 / $viewport;
+  @return $rate * $fontsize * 1vh;
+}

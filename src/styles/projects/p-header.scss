@@ -1,0 +1,18 @@
+@use "@/styles/global" as *;
+
+.headerContainer{
+    
+}
+.header {
+  @include fontsize(24);
+  position: absolute;
+  top: auto;
+  left: getVW(18);
+  bottom: getVW(18);
+  right: auto;
+  letter-spacing: 0.05em;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
