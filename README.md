@@ -1,5 +1,4 @@
-# NarrativeAI/BUNGOU
-***
+## NarrativeAI/BUNGOU
 
 ## Setup
 
